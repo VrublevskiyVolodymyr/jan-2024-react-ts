@@ -1,0 +1,24 @@
+.postContainer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.postMeta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    margin-right: 5px;
+    background-color: #f2f2f2;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+

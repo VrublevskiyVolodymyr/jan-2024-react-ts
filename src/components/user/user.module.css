@@ -1,0 +1,54 @@
+.userContainer {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.userImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    object-fit: cover;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    border: solid 1px #ccc;
+
+}
+
+.userLabel {
+    font-weight: bold;
+    margin: 5px;
+
+}
+
+.userData {
+    margin: 10px;
+}
+
+.userAddressLabel {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
