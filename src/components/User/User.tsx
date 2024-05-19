@@ -2,6 +2,7 @@ import React, {FC,} from 'react';
 import {IUser} from "../../interfaces";
 
 import styles from './user.module.css'
+import {useNavigate} from "react-router-dom";
 
 interface IProps {
 user:IUser;
@@ -11,6 +12,7 @@ type IPropsType = IProps & { children?: React.ReactNode };
 
 const User: FC<IPropsType> = ({user}) => {
 
+const navigate = useNavigate();
 
     return (
         <div className={styles.userCard}>
@@ -30,6 +32,7 @@ const User: FC<IPropsType> = ({user}) => {
                 <p>{user.company.catchPhrase}</p>
                 <p>{user.company.bs}</p>
             </div>
+            <button onClick={()=> navigate(`${user.id.toString()}/posts`)}>Get posts of user</button>
         </div>
     );
 };

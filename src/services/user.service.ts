@@ -6,7 +6,9 @@ import {IComment, IPost, IUser} from "../interfaces";
 const userService = {
     getAllUsers: (): IRes<IUser[]> => axiosInstance.get(urls.users),
     getAllPosts: (): IRes<IPost[]> => axiosInstance.get(urls.posts),
-    getAllComments: (): IRes<IComment[]> => axiosInstance.get(urls.comments)
+    getAllPostsOfUser: (userId:number): IRes<IPost[]> => axiosInstance.get(urls.postsOfUser(userId)),
+    getAllComments: (): IRes<IComment[]> => axiosInstance.get(urls.comments),
+    getAllCommentsOfPost: (postId:number): IRes<IComment[]> => axiosInstance.get(urls.commentsOfPost(postId)),
 }
 
 
