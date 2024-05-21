@@ -1,8 +1,9 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+
 import {IComment} from "../interfaces";
-import {userService} from "../services";
 import {Comment} from "../components";
+import {commentService} from "../services/comment.service";
 
 interface IProps {
 
@@ -15,7 +16,7 @@ const PostCommentsPage: FC<IPropsType> = () => {
     const history = () => window.history.back();
 
     useEffect(() => {
-        postId && userService.getAllCommentsOfPost(+postId).then(({data}) => setComments(data))
+        postId && commentService.getAllCommentsOfPost(+postId).then(({data}) => setComments(data))
     }, [postId]);
     return (
         <div key={postId}>

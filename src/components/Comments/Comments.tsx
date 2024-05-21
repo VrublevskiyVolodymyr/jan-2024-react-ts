@@ -1,7 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
+
 import {IComment} from "../../interfaces";
-import {userService} from "../../services";
 import {Comment} from "../Comment/Comment";
+import {commentService} from "../../services/comment.service";
 
 interface IProps {
 
@@ -12,7 +13,7 @@ const Comments: FC<IPropsType> = () => {
     const [comments, setComments] = useState<IComment[]>([]);
 
     useEffect(() => {
-        userService.getAllComments().then(({data}) => setComments(data))
+        commentService.getAllComments().then(({data}) => setComments(data))
     }, []);
 
     return (

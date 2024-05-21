@@ -1,8 +1,9 @@
 import React, {FC, useEffect, useState} from 'react';
+import {useParams} from "react-router-dom";
+
 import {Post} from "../components";
 import {IPost} from "../interfaces";
-import {userService} from "../services";
-import {useParams} from "react-router-dom";
+import {postService} from "../services/post.service";
 
 interface IProps {
 
@@ -16,7 +17,7 @@ const UserPostsPage: FC<IPropsType> = () => {
     const history = () => window.history.back();
 
     useEffect(() => {
-        userId && userService.getAllPostsOfUser(+userId).then(({data}) => setPosts(data))
+        userId && postService.getAllPostsOfUser(+userId).then(({data}) => setPosts(data))
     }, [userId]);
 
     return (
