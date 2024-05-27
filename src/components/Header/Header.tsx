@@ -12,10 +12,10 @@ const Header: FC<IProps> = () => {
         <div className={styles.headerContainer}>
             <div className={styles.logo}>MyWebsite</div>
             <nav className={styles.navLinks}>
-                <NavLink to="/home" className={styles.navLink}>Home</NavLink>
-                <NavLink to="/users" className={styles.navLink}>Users</NavLink>
-                <NavLink to="/comments" className={styles.navLink}>Comments</NavLink>
-                <NavLink to="/posts" className={styles.navLink}>Posts</NavLink>
+                <NavLink to="/home" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Home</NavLink>
+                <NavLink to="/users" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Users</NavLink>
+                <NavLink to="/comments" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Comments</NavLink>
+                <NavLink to="/posts" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Posts</NavLink>
             </nav>
         </div>
 
