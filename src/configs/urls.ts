@@ -1,16 +1,24 @@
-const baseURL = "https://jsonplaceholder.typicode.com"
+const baseURL = 'http://owu.linkpc.net/carsAPI/v2'
 
-const users = "/users"
-const posts = "/posts"
-const comments = "/comments"
-
+const auth = '/auth'
+const cars = '/cars'
+const users = '/users'
 
 const urls = {
-    users: users,
-    posts:posts,
-    postsOfUser:(userId:number) => `users/${userId}/posts`,
-    comments:comments,
-    commentsOfPost:(postId:number) => `posts/${postId}/comments`,
+    auth: {
+        login: auth,
+        register: users,
+        refresh:`${auth}/refresh`,
+        me: `${auth}/me`
+    },
+    cars: {
+        base: cars,
+        byId: (id:string) => `${cars}/${id}`
+    },
+    users:'/users'
 }
 
-export {baseURL, urls}
+export {
+    baseURL,
+    urls
+}

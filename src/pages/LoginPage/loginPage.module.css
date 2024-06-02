@@ -1,0 +1,9 @@
+.login{
+    width: 100%;
+    min-height: 80.2vh;
+    background: #585856;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}

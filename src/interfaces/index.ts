@@ -1,3 +1,5 @@
 export * from './user.interface';
-export * from './post.interface';
-export * from './comment.interface';
+export * from './car.interface';
+export * from './tokenPair.interface';
+export * from './authData.interface';
+export * from './carsPaginated.interface'
